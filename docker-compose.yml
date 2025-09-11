@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:17.5
+    restart: always
+    environment:
+      - POSTGRES_USER=minhduc
+      - POSTGRES_PASSWORD=05092004
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+volumes:
+  postgres:
